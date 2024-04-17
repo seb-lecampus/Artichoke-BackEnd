@@ -1,0 +1,19 @@
+version: "3.8"
+
+name: artichoke-backend
+
+services:
+  mysql:
+    container_name: mysql
+    build:
+      dockerfile: ./mysql.dockerfile
+    ports:
+      - 6603:3306
+    networks:
+      - network1
+
+networks:
+  network1:
+    name: backend-db
+  network2:
+    name: backend-http
