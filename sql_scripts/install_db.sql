@@ -109,3 +109,47 @@ CREATE TABLE room (
   ref_type INT,
   FOREIGN KEY (ref_type) REFERENCES type_room(ref_type)
 );
+
+-- Creation Dependency 2 | 4 Tables
+
+CREATE TABLE reservation (
+    id_reservation INT AUTO_INCREMENT PRIMARY KEY,
+    id_user INT,
+    number_room INT,
+    reference_promo INT,
+    start_date_reservation DATE,
+    end_date_reservation DATE,
+    nbr_person_reservation INT,
+    FOREIGN KEY (id_user) REFERENCES user(id_user),
+    FOREIGN KEY (number_room) REFERENCES room(number_room),
+    FOREIGN KEY (reference_promo) REFERENCES promo(reference_promo)
+);
+
+CREATE TABLE notice (
+    id_notice INT AUTO_INCREMENT PRIMARY KEY,
+    reference_notice INT,
+    title_notice TINYTEXT,
+    image_notice TEXT,
+    note_notice TEXT,
+    lastName_notice TINYTEXT,
+    id_user INT,
+    FOREIGN KEY (id_user) REFERENCES user(id_user)
+);
+
+CREATE TABLE user_event(
+   id_user_event INT AUTO_INCREMENT PRIMARY KEY,
+   id_user INT,
+   id_event INT,
+   FOREIGN KEY (id_user) REFERENCES user(id_user),
+   FOREIGN KEY (id_event) REFERENCES event(id_event)
+);
+
+CREATE TABLE user_company(
+    id_user_company INT AUTO_INCREMENT PRIMARY KEY,
+    id_company INT,
+    id_user INT,
+    FOREIGN KEY (id_company) REFERENCES company(id_company),
+    FOREIGN KEY (id_user) REFERENCES user(id_user)
+);
+
+-- Creation Dependency 3 | 2 Tables

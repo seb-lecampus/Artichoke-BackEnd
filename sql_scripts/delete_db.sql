@@ -4,9 +4,16 @@ USE artichoke;
 
 -- Dependency 2
 
+DROP TABLE IF EXISTS user_company;
+
+DROP TABLE IF EXISTS user_event;
+
+DROP TABLE IF EXISTS notice;
+
 DROP TABLE IF EXISTS reservation;
 
 -- Dependency 1
+
 DROP TABLE IF EXISTS room;
 
 DROP TABLE IF EXISTS newscast;

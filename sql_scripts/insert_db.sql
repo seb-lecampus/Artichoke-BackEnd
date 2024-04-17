@@ -47,7 +47,8 @@ VALUES
 
 -- Insertion Dependency 1 | 3 tables
 
-INSERT INTO user (firstName_user, lastName_user, date_of_birth_user, email_user, telephone_user, gender_user, id_payment, id_account) VALUES
+INSERT INTO user (firstName_user, lastName_user, date_of_birth_user, email_user, telephone_user, gender_user, id_payment, id_account)
+VALUES
     ('serge', 'szynkarski', '1992-02-06', 'serge.szynkarski@le-campus-numerique.fr', '06121212', 'Male', 1, 1);
 
 INSERT INTO newscast (id_event, title_newscast, image_newscast, description_newscast)
@@ -59,3 +60,21 @@ VALUES
     (1, 1);
 
 -- Insertion Dependency 2 | 4 tables
+
+INSERT INTO reservation (id_user, number_room, reference_promo, start_date_reservation, end_date_reservation, nbr_person_reservation)
+VALUES
+    (1, 1, 1, '2024-01-01', '2024-01-07', 7);
+
+INSERT INTO notice (reference_notice, title_notice, image_notice, note_notice, lastName_notice, id_user)
+VALUES
+    (1, 'Notice title', 'www.artichoke.com/assets/notice1', 'lorem inds fifn fezoinecc cnnervc fcnf', 'Doe notice', 1);
+
+INSERT INTO user_event (id_user, id_event)
+VALUES
+    (1, 1);
+
+INSERT INTO user_company (id_company, id_user)
+VALUES
+    (1, 1);
+
+-- Insertion Dependency 3 | 2 tables
