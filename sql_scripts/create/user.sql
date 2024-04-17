@@ -11,4 +11,4 @@ CREATE TABLE user (
     id_account INT,
     FOREIGN KEY (id_payment) REFERENCES payment(id_payment),
     FOREIGN KEY (id_account) REFERENCES account(id_account)
-)
+);

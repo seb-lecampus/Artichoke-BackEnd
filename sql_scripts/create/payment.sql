@@ -5,4 +5,4 @@ CREATE TABLE payment (
     number_payment VARCHAR(16) NOT NULL,
     expiry_payment DATE NOT NULL,
     cryptogram_payment VARCHAR(3) NOT NULL
-)
+);
