@@ -4,4 +4,4 @@ CREATE TABLE language (
     translate_english_language TINYTEXT,
     translate_french_language TINYTEXT,
     translate_italian_language TINYTEXT
-)
+);

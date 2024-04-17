@@ -1,4 +1,5 @@
 CREATE DATABASE artichoke;
+
 USE artichoke;
 
 -- Creation Dependency 0 | 10 tables
