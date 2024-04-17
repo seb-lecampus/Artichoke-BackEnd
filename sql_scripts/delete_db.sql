@@ -4,6 +4,8 @@ USE artichoke;
 
 -- Dependency 2
 
+DROP TABLE IF EXISTS reservation;
+
 -- Dependency 1
 DROP TABLE IF EXISTS room;
 
