@@ -153,3 +153,24 @@ CREATE TABLE user_company(
 );
 
 -- Creation Dependency 3 | 2 Tables
+
+CREATE TABLE reservation_extra(
+    id_reservation_extra INT AUTO_INCREMENT PRIMARY KEY,
+    id_reservation INT,
+    id_extra INT,
+    FOREIGN KEY (id_reservation) REFERENCES reservation(id_reservation),
+    FOREIGN KEY (id_extra) REFERENCES extra(id_extra)
+);
+
+CREATE TABLE facture (
+    reference_facture INT AUTO_INCREMENT PRIMARY KEY,
+    id_reservation INT,
+    id_user INT,
+    id_payment INT,
+    date_facture DATE,
+    summary_facture TINYTEXT,
+    state_facture TINYTEXT,
+    FOREIGN KEY (id_reservation) REFERENCES reservation(id_reservation),
+    FOREIGN KEY (id_user) REFERENCES user(id_user),
+    FOREIGN KEY (id_payment) REFERENCES payment(id_payment)
+);

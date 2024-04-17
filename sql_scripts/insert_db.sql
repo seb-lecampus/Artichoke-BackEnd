@@ -78,3 +78,11 @@ VALUES
     (1, 1);
 
 -- Insertion Dependency 3 | 2 tables
+
+INSERT INTO reservation_extra (id_reservation, id_extra)
+VALUES
+    (1, 1);
+
+INSERT INTO facture (id_reservation, id_user, id_payment, date_facture, summary_facture, state_facture)
+VALUES
+    (1, 1, 1, '2024-06-01', 'Here is the summary', 'in transaction');
