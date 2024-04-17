@@ -1,0 +1,2 @@
+INSERT INTO user (firstName_user, lastName_user, date_of_birth_user, email_user, telephone_user, gender_user, id_payment, id_account) VALUES
+    ('serge', 'szynkarski', '1992-02-06', 'serge.szynkarski@le-campus-numerique.fr', '06121212', 'Male', 1, 1)
