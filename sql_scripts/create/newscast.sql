@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS newscast;
 CREATE TABLE newscast (
-    reference_newscast INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    id_event INT,
+    reference_newscast BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    id_event BIGINT,
     title_newscast TINYTEXT,
     image_newscast TINYTEXT,
     description_newscast TINYTEXT,

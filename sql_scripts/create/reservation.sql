@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS reservation;
 CREATE TABLE reservation (
     id_reservation BIGINT AUTO_INCREMENT PRIMARY KEY,
     id_user BIGINT,
-    number_room INT,
+    number_room BIGINT,
     reference_promo BIGINT,
     start_date_reservation DATE,
     end_date_reservation DATE,

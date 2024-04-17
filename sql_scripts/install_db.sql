@@ -8,7 +8,7 @@ CREATE TABLE account(
     id_account INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     login_account TINYTEXT,
     password_account TINYTEXT,
-    authorities TINYTEXT
+    authorities_account TINYTEXT
 );
 
 CREATE TABLE advantage (
@@ -20,7 +20,7 @@ CREATE TABLE advantage (
 CREATE TABLE company(
     id_company INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     name_company TINYTEXT,
-    adress_company TINYTEXT,
+    address_company TINYTEXT,
     email_company TINYTEXT,
     telephone_company TINYTEXT
 );

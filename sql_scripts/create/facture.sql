@@ -1,9 +1,9 @@
 DROP TABLE IF EXISTS facture;
 CREATE TABLE facture (
-    reference_facture INT AUTO_INCREMENT PRIMARY KEY,
-    id_reservation INT,
-    id_user INT,
-    id_payment INT,
+    reference_facture BIGINT AUTO_INCREMENT PRIMARY KEY,
+    id_reservation BIGINT,
+    id_user BIGINT,
+    id_payment BIGINT,
     date_facture DATE,
     summary_facture TINYTEXT,
     state_facture TINYTEXT,

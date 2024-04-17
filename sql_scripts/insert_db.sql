@@ -1,7 +1,7 @@
 USE artichoke;
 -- Insertion Dependency 0 | 10 tables
 
-INSERT INTO account (login_account, password_account, authorities)
+INSERT INTO account (login_account, password_account, authorities_account)
 VALUES
     ('test@gmail.com', 'password', 'access'),
     ('LeBadBoy', 'jshjksjhsdh', 'employee');
@@ -10,7 +10,7 @@ INSERT INTO advantage (title_advantage, description_advantage)
 VALUES
     ('Happiness', 'This hotel is the best');
 
-INSERT INTO company (name_company, adress_company, email_company, telephone_company)
+INSERT INTO company (name_company, address_company, email_company, telephone_company)
 VALUES
     ('Tech-Techno', '00 rue Machin, quelquePart', 'tech@gmail.com', '00 11 22 33 44 55' ),
     ('Fac Industrie', '22 rue nulla, ville', 'ind@gmail.com', '07 02 03 05 09 10' );
