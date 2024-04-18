@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS advantage;
 CREATE TABLE advantage (
-    reference_advantage BIGINT AUTO_INCREMENT PRIMARY KEY,
+    reference_advantage BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     title_advantage TINYTEXT,
     description_advantage TINYTEXT
 );

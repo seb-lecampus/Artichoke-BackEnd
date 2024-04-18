@@ -1,10 +1,10 @@
 DROP TABLE IF EXISTS user;
 CREATE TABLE user (
     id_user BIGINT AUTO_INCREMENT PRIMARY KEY,
-    firstName_user TINYTEXT,
-    lastName_user TINYTEXT,
+    firstName_user TINYTEXT NOT NULL,
+    lastName_user TINYTEXT NOT NULL,
     date_of_birth_user DATE,
-    email_user TINYTEXT,
+    email_user TINYTEXT NOT NULL,
     telephone_user TINYTEXT,
     gender_user TINYTEXT,
     id_payment BIGINT,
