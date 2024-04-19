@@ -1,12 +1,20 @@
-# Docker-compose
+# Artichoke-BackEnd
 
-Put the MySQL root password in `.mysql_db_pass` file (without .extension) next to the `docker-compose.yml` file.
+A Hotel Application created by Team 4
 
-Run `docker compose up --build`.
+## Requirments
 
-MySQL port is `6603`.
+For building and running the application you need:
+- [Docker](https://www.docker.com/)
 
-# TODO
-[] docker-compose : CI/CD
-[] docker-compose : Use profil
-[] Create user in MySQL with required privileges only and remove root
+## Setup the dev environement - Docker-compose
+
+- Put the MySQL root password in `.mysql_db_pass` file (without .extension) next to the `docker-compose.yml` file.
+- MySQL port is `6603`.
+
+## Commands to run this application locally
+
+- Run command in the root folder
+```bash
+docker compose up --build -d
+```
