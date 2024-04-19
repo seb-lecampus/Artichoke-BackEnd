@@ -1,2 +1,2 @@
-INSERT INTO notice (reference_notice, title_notice, image_notice, note_notice, lastName_notice, id_user) VALUES
-    (1, 'Notice title', 'www.artichoke.com/assets/notice1', 'lorem inds fifn fezoinecc cnnervc fcnf', 'Doe notice', 1);
+INSERT INTO notice (rate_notice, title_notice, image_notice, description_notice, lastName_notice, id_user) VALUES
+    (4, 'Notice title', 'www.artichoke.com/assets/notice1', 'lorem inds fifn fezoinecc cnnervc fcnf', 'Doe notice', 1);

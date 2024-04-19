@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS company;
 CREATE TABLE company(
-    id_company INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    name_company TINYTEXT,
-    adress_company TINYTEXT,
-    email_company TINYTEXT,
+    id_company BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name_company TINYTEXT NOT NULL,
+    address_company TINYTEXT NOT NULL,
+    email_company TINYTEXT NOT NULL,
     telephone_company TINYTEXT
 );

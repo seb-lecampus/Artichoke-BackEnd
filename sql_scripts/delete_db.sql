@@ -2,6 +2,10 @@ USE artichoke;
 
 -- Dependency 3
 
+DROP TABLE IF EXISTS facture;
+
+DROP TABLE IF EXISTS reservation_extra;
+
 -- Dependency 2
 
 DROP TABLE IF EXISTS user_company;

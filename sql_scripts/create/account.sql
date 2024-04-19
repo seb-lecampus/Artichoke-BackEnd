@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS account;
 CREATE TABLE account(
-    id_account INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    login_account TINYTEXT,
-    password_account TINYTEXT,
-    authorities TINYTEXT
+    id_account BIGINT AUTO_INCREMENT PRIMARY KEY,
+    login_account TINYTEXT NOT NULL,
+    password_account TINYTEXT NOT NULL,
+    authorities_account TINYTEXT NOT NULL
 );
