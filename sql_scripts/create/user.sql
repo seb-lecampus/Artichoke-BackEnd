@@ -3,7 +3,7 @@ CREATE TABLE user (
     id_user BIGINT AUTO_INCREMENT PRIMARY KEY,
     firstName_user TINYTEXT NOT NULL,
     lastName_user TINYTEXT NOT NULL,
-    date_of_birth_user DATE,
+    date_of_birth_user DATE NOT NULL,
     email_user TINYTEXT NOT NULL,
     telephone_user TINYTEXT,
     gender_user TINYTEXT,
