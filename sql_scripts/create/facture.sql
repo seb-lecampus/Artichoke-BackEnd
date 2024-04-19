@@ -3,7 +3,7 @@ CREATE TABLE facture (
     reference_facture BIGINT AUTO_INCREMENT PRIMARY KEY,
     date_facture DATE NOT NULL,
     summary_facture TINYTEXT NOT NULL,
-    state_facture TINYTEXT NOT NULL,
+    state_facture ENUM('Paid', 'Unpaid', 'Canceled', 'Refused') DEFAULT 'Unpaid',
     id_reservation BIGINT,
     id_user BIGINT,
     id_payment BIGINT,
