@@ -42,8 +42,8 @@ services:
 networks:
   network1:
     name: backend-db
-  network2:
-    name: backend-http
+  #network2: # For exemple, not used
+  #  name: backend-http
 
 secrets:
   db_pass:
