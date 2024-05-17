@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS event;
 CREATE TABLE event(
-    id_event BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    id_event BIGINT AUTO_INCREMENT PRIMARY KEY,
     title_event TINYTEXT NOT NULL,
     seat_event TINYTEXT NOT NULL,
     date_start_event DATE NOT NULL,

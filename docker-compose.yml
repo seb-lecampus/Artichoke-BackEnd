@@ -3,17 +3,48 @@ version: "3.8"
 name: artichoke-backend
 
 services:
-  mysql:
+  mysql-staging:
     container_name: mysql
+    profiles: ["staging"]
     build:
       dockerfile: ./mysql.dockerfile
-    ports:
+    #ports:
+    #  - 6603:3306  # in staging environement port must not be published, so you can't access mysql container from the server, only from another container
+    networks:       # that are on the same network
+      - network1    # using (localhost:<port>)
+    secrets:
+      - db_pass
+    environment:
+      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db_pass # note the _FILE at the end of the name of the environement variable
+
+  mysql-dev:
+    container_name: mysql
+    profiles: ["dev"]
+    build:
+      dockerfile: ./mysql.dockerfile
+    ports:        # on the dev environement publish port
       - 6603:3306
     networks:
       - network1
+    secrets:
+      - db_pass
+    environment:
+      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db_pass # note the _FILE at the end of the name of the environement variable
+
+  #For testing purpose. You can test ping localhost:3306 and check if container comunicate
+  #alpine:
+  #  image: alpine:latest
+  #  container_name: alpine
+  #  tty: true
+  #  networks:
+  #    - network1
 
 networks:
   network1:
     name: backend-db
-  network2:
-    name: backend-http
+  #network2: # For exemple, not used
+  #  name: backend-http
+
+secrets:
+  db_pass:
+    file: ./.mysql_db_pass
